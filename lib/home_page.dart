@@ -7,6 +7,21 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+      body: Center(
+          child: Column(
+        children: [
+          Row(
+            children: const [
+              Text('row1'),
+            ],
+          ),
+          Row(
+            children: const [
+              Text('row2'),
+            ],
+          ),
+        ],
+      )),
     );
   }
 }
