@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_app/get_rich_quick_page.dart';
 import 'package:my_first_app/main.dart';
+import 'package:my_first_app/settings_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -29,6 +30,13 @@ class HomePage extends StatelessWidget {
                 ListTile(
                   onTap: () {
                     debugPrint('Settings Tapped in Drawer');
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return const SettingsPage();
+                        },
+                      ),
+                    );
                   },
                   leading: const Icon(Icons.settings),
                   title: const Text('Settings'),
@@ -39,7 +47,7 @@ class HomePage extends StatelessWidget {
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
                         builder: (BuildContext context) {
-                          return const MyApp();
+                          return const LoginPage();
                         },
                       ),
                     );
